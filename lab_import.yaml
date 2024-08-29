@@ -1,0 +1,11 @@
+---
+- name: Import lab
+  hosts: all
+  become: true
+  tasks:
+  - name: Rename
+    hostname:
+      name: "{{ custom_name }}" 
+    when: custom_name is defined
+  - include_tasks: rename_host.yaml 
+    when: custom_name is not defined

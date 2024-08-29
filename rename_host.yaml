@@ -1,0 +1,5 @@
+# custom_name: test
+  - name: Change hostname
+    hostname:
+      name: "{{ custom_name }}"
+       
